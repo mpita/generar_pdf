@@ -6,7 +6,8 @@ from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'pdf.views.some_view', name='some_view'),
+    url(r'^$', 'pdf.views.index', name='index'),
+    url(r'^pdf', 'pdf.views.pdf', name='pdf'),
     # url(r'^generar_pdf/', include('generar_pdf.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

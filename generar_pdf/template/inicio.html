@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+     <meta charset="utf-8">
+     <title>Inicio</title>
+     <link rel="stylesheet" href="{{STATIC_URL}}css/estilo.css">
+     <link rel="stylesheet" href="{{STATIC_URL}}css/bootstrap.min.css" />
+     <link rel="shortcut icon" href="{{STATIC_URL}}img/logo_pdf.png">
+</head>
+<body>
+	<img id="fondo" src="{{STATIC_URL}}img/documentos.jpg">
+    <header>
+        <h1>Generar PDF</h1>
+    </header>
+    <section>
+    	<form id="formulario" class="form-horizontal" method="post"  action="/pdf">{% csrf_token %}
+            <br /><br />
+             <div class="form-group">
+                <input type="text" class="form-control" id="nombre" name="nombre" maxlength="40" placeholder="Usuario">
+            </div>
+            <br />
+            <div class="form-group">
+                <textarea class="form-control" id="nota" name="nota" cols="40" rows="10" placeholder="Esciba una nota de prueba"></textarea>
+            </div>
+            <br />
+            <button class="btn btn-default" type="submit">Crear PDF</button>
+        </form>
+    </section>
+</body>
+</html>
